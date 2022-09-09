@@ -1,6 +1,37 @@
 # hazelcast-ssl
 hazelcast-ssl extension for HazelcastIMDG 4.2.2
 
+To build jar, execute command
+
+`./gradlew clean build`
+
+in project root.
+
+Jar file will appear in build/lib folder. To connect it to haselcast member instance, set its path to hazelcast member CLASSPATH env variable.
+When running hazelcast member, need use our plugin's launcher: `com.hazelcast.CustomHazelcastMemberStarter` 
+There is `start-hazelcast.sh`, which you can replace original one with inside member image or container.
+It accepts MAIN_CLASS env variable, so you can pass `MAIN_CLASS=com.hazelcast.CustomHazelcastMemberStarter` to it.
+
+E.g.: 
+```bash
+JAVA_OPTS="-Dhazelcast.config=/opt/hazelcast/configs/hazelcast-1.yaml" MAIN_CLASS=com.hazelcast.CustomHazelcastMemberStarter sh start-hazelcast.sh
+```
+
+or inside docker-compose.yaml:
+```yaml
+...
+  hazelcast-1:
+    image: hazelcast:4.2.2
+    restart: unless-stopped
+    environment:
+      JAVA_OPTS: -Dhazelcast.config=/opt/hazelcast/configs/hazelcast-1.yaml
+      MAIN_CLASS: com.hazelcast.CustomHazelcastMemberStarter
+    network_mode: host
+  volumes:
+    - ./my-hazelcast-configs:/opt/hazelcast/configs
+```
+
+
 To use ssl mode, member should have ssl section configured by this way:
 
 ```yaml
