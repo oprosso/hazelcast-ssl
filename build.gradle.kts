@@ -1,5 +1,9 @@
+group= "ru.oprosso"
+version= "1.0.5"
+
 plugins {
     id("java")
+    id("maven-publish")
 }
 
 repositories {
