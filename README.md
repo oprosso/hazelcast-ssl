@@ -9,7 +9,7 @@ in project root.
 
 Jar file will appear in build/lib folder. To connect it to haselcast member instance, set its path to hazelcast member CLASSPATH env variable.
 When running hazelcast member, need use our plugin's launcher: `com.hazelcast.CustomHazelcastMemberStarter` 
-There is `start-hazelcast.sh`, which you can replace original one with inside member image or container.
+There is `start-hazelcast.sh`, which with you can replace original one inside member image or container.
 It accepts MAIN_CLASS env variable, so you can pass `MAIN_CLASS=com.hazelcast.CustomHazelcastMemberStarter` to it.
 
 E.g.: 
