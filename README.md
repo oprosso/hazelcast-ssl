@@ -1,5 +1,5 @@
 # hazelcast-ssl
-hazelcast-ssl extension for HazelcastIMDG 4.2.2
+SSL extension for HazelcastIMDG 4.2.2
 
 To build jar, execute command
 
