@@ -1,6 +1,23 @@
 # hazelcast-ssl
 SSL extension for HazelcastIMDG 4.2.2
 
+```Maven
+<!-- https://mvnrepository.com/artifact/ru.oprosso/hazelcast-ssl -->
+<dependency>
+    <groupId>ru.oprosso</groupId>
+    <artifactId>hazelcast-ssl</artifactId>
+    <version>1.0.12</version>
+</dependency>
+```
+
+```Gradle (Kotlin)
+implementation("ru.oprosso:hazelcast-ssl:1.0.12")
+```
+
+```Gradle(short)
+implementation 'ru.oprosso:hazelcast-ssl:1.0.12'
+```
+
 To build jar, execute command
 
 `./gradlew clean build`
