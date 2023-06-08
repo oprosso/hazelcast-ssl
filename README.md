@@ -1,7 +1,8 @@
 # hazelcast-ssl
 SSL extension for HazelcastIMDG 4.2.2
 
-```Maven
+Maven
+```xml
 <!-- https://mvnrepository.com/artifact/ru.oprosso/hazelcast-ssl -->
 <dependency>
     <groupId>ru.oprosso</groupId>
@@ -10,11 +11,13 @@ SSL extension for HazelcastIMDG 4.2.2
 </dependency>
 ```
 
-```Gradle (Kotlin)
+Gradle (Kotlin)
+```kt
 implementation("ru.oprosso:hazelcast-ssl:1.0.12")
 ```
 
-```Gradle(short)
+Gradle(short)
+```groovy
 implementation 'ru.oprosso:hazelcast-ssl:1.0.12'
 ```
 
